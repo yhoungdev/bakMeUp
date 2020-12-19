@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* for the variable */
+:root {
+    --color: rgb(59, 59, 194);
+    --btn:rgb(110, 110, 252);
+    --hover:rgb(159, 159, 250);;
+}
+/* header stylw */
+header {
+    position: sticky;
+    top: 0;
+    padding: 2em;
+
+}
+header .wrap {
+    display: flex;
+    justify-content: space-between;
+
+}
+header .wrap ul {
+    list-style-type: none;
+    
+}
+header .wrap ul li{
+    display: inline;
+    margin-left: 3em;
+} 
+
+
+/* style for the main part */
+main {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* file */
+#pdf {
+    display: none;
+}
+/* upload button */
+main form input[type=submit] {
+    margin-top: 2em;
+    width: 10em;
+    height: 45px;
+    border: none;
+    color: white;
+    background-color: var(--btn);
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+}
+main form input[type=submit]:hover{
+    font-weight: bold;
+    background-color: var(--hover);
+
+}
+
+
+/* for small screen */
+@media screen and (min-width:300px) and (max-width:768px) {
+  
+}
