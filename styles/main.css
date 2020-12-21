@@ -79,6 +79,15 @@ header nav ul li .fa-question-circle {
     cursor: pointer;
 }
 
+.folderEx {
+    background-color: rgba(0, 0, 0, 0.863);
+    color: white ;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px;
+    font-weight: 400;
+    display: none;
+}
 
 /* for small screen */
 @media screen and (min-width:300px) and (max-width:768px) {
