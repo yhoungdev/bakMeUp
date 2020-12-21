@@ -6,36 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF backuper</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/font-awesome.min.css">
 </head>
 <body>
     <!--header -->
+  
     <header>
         <div class="wrap">
             <span>
-                UPloader
+                <h3>
+                    BackMeUp
+                </h3>
             </span>
             <nav>
                 <ul>
-                    <li>uploads</li>
-                    <li>about</li>
+                    <li><i class="fa fa-folder" style="font-size: 25px;"></i> 
+                     </li>
+                    <li><i class="fa fa-question-circle" aria-hidden="true" style="font-size: 25px;"></i></li>
                 </ul>
+                <p style="display:none;" class="folderEx"> check your uploaded files</p>
+                <p style="display:none;" class="question"> know more about backMeUp</p>
             </nav>
         </div>
     </header>
+ 
     <!--main part-->
     <main>
 
         <form action="" id="cloud">
             
             <input type="file" name="uploader" id="pdf"/>
-            <label for="pdf">upload a file</label>
-             <h6 id="msg"></h6>
+            <label for="pdf">
+                <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            </label>
+             <h4>Upload a PDF file </h4>
+             <h5 id="msg"></h5>
              <h5 id="sizeMsg"></h5>
             <br>
-            <input type="submit" value="upload to cloud" id="btn"/>
+         
+            <div class="display"></div>
         </form>
 
     </main>
+    <script src="./scripts/axios.min.js"></script>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/explain.js"></script>
 </body>
 </html>

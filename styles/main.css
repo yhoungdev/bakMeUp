@@ -7,7 +7,8 @@
 :root {
     --color: rgb(59, 59, 194);
     --btn:rgb(110, 110, 252);
-    --hover:rgb(159, 159, 250);;
+    --hover:rgb(159, 159, 250);
+    --header:rgb(110, 110, 252);
 }
 /* header stylw */
 header {
@@ -44,6 +45,9 @@ main {
 #pdf {
     display: none;
 }
+header {
+    
+}
 /* upload button */
 main form input[type=submit] {
     margin-top: 2em;
@@ -60,6 +64,19 @@ main form input[type=submit]:hover{
     font-weight: bold;
     background-color: var(--hover);
 
+}
+main form label .fa-cloud-upload{
+    font-size: 10em;
+    color: grey;
+    cursor: pointer;
+}
+.fa-folder {
+    color: grey;
+    cursor: pointer;
+    font-size: 29em;
+}
+header nav ul li .fa-question-circle {
+    cursor: pointer;
 }
 
 
