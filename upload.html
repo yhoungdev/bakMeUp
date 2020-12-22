@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      
+    <meta name="description" content="a simple pdf and txt packupper ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author " content="Obibo Immanuel">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF backuper</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/font-awesome.min.css">
+</head>
+<body>
+    <!--header -->
+  
+    <header>
+        <div class="wrap">
+            <span>
+                <h3>
+                    BackMeUp
+                </h3>
+            </span>
+            <nav>
+                <ul>
+                    <li><i class="fa fa-folder" style="font-size: 25px;"></i> 
+                     </li>
+                    <li><i class="fa fa-question-circle" aria-hidden="true" style="font-size: 25px;"></i></li>
+                </ul>
+                <p  class="folderEx"> check your uploaded files</p>
+                <p style="display:none;" class="question"> know more about backMeUp</p>
+            </nav>
+        </div>
+    </header>
+ 
+    <!--main part-->
+    <main>
+
+        <form action="" id="cloud">
+            
+            <input type="file" name="uploader" id="pdf"/>
+            <label for="pdf">
+                <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+            </label>
+             <h4 style="color: rgb(83, 83, 83);">Upload a PDF file </h4>
+             <h5 id="msg"></h5>
+             <h5 id="sizeMsg"></h5>
+            <br>
+         
+            <div class="display"></div>
+        </form>
+
+    </main>
+    <script src="./scripts/axios.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/explain.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyB8M0ojxEQVOdL7XjUnqzjj4n8nps7YlJM",
+    authDomain: "backmeup-e6550.firebaseapp.com",
+    projectId: "backmeup-e6550",
+    storageBucket: "backmeup-e6550.appspot.com",
+    messagingSenderId: "906201201562",
+    appId: "1:906201201562:web:a2093c5e6e62b4963b5823",
+    measurementId: "G-3H24RRHNSG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>

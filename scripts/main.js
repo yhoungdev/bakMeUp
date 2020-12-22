@@ -35,13 +35,14 @@ const Action=()=>{
                 btn2.innerHTML=`  <input type="submit" value="upload to cloud" id="btn"/>`  
                     //noe set action for the button 
                 btn2.onclick= e => {
-                    console.log('button click ')
+                    console.log(name);
+                    
                 }     
                 
                 
                 //now send form data to cloud 
             } else{
-                msg.textContent=`it must be a pdf or text fistyle="display:none;"le `;
+                msg.textContent=`it must be a .pdf or .txt file `;
                 msg.style.color='red';  
                   
             }
