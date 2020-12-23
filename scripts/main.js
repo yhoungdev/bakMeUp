@@ -32,6 +32,8 @@ const Action=()=>{
                     //dis[lay the file details]
               
                 sizeMsg.textContent=`${name}`
+                msg.style.display='none'
+               
                     //show the button when a pdf file is picked 
                 const btn2=document.querySelector('.display');
                 btn2.innerHTML=`  <input type="submit" value="upload to cloud" id="btn"/>`  
@@ -42,7 +44,13 @@ const Action=()=>{
                     console.log(storageRef)
                     let putInTo=storageRef.put(fileNow)
                         putInTo.on('state_change', snapshot => {
-                               swal('UPLOAD SUCCESSFULLY','your file has been uploaded succefully ','success')
+                            let dis=document.querySelector('.load');
+                            dis.innerHTML="<img src='./assets/img/91.gif'>";
+                              setTimeout(()=> {
+                                  swal('upload','your file has been uploaded succefully ','success')
+                                dis.style.display='none'
+                              },3000)
+                           
                         })
                     
                 }     

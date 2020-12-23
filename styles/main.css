@@ -65,6 +65,11 @@ main form input[type=submit]:hover{
     background-color: var(--hover);
 
 }
+.back {
+    background-image: url('https://jobhop.co.uk/image/5748');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 main form label .fa-cloud-upload{
     font-size: 10em;
     color: grey;
@@ -93,15 +98,16 @@ header nav ul li .fa-question-circle {
 .index {
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.692);
+    background-color: rgba(0, 0, 0, 0.596);
 }
-.index > h3 {
+.index > h2 {
     color: white;
     margin-bottom: 1em;
     text-transform: capitalize;
 }
 .index span p {
     color: rgb(221, 221, 221);
+    font-size: 19px;
 }
 .index .mainBtn{
     padding: 1em;
@@ -113,6 +119,8 @@ header nav ul li .fa-question-circle {
     color: white;
     font-weight: 700;
     margin-top: 1em;
+    height: 60px;
+    width: 10em;
 
 }
 /* for small screen */
