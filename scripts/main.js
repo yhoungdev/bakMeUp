@@ -20,6 +20,8 @@ const Action=()=>{
     //now get the upload properties
     upload.addEventListener('change', e =>{
         //now get the name and size of choosen file 
+        let fileNow=e.target;
+        console.log(e.target.files )
         let name=e.target.files[0].name;
         let size=e.target.files[0].size;
         //now check for file type format with regex 
@@ -28,14 +30,18 @@ const Action=()=>{
             //test if file type is .pdf or txt only 
             if(name.match(matchFor) || name.match(matchForTxt)){
                     //dis[lay the file details]
-                msg.textContent=`${name}`
-                sizeMsg.textContent=`${size}`
+              
+                sizeMsg.textContent=`${name}`
                     //show the button when a pdf file is picked 
                 const btn2=document.querySelector('.display');
                 btn2.innerHTML=`  <input type="submit" value="upload to cloud" id="btn"/>`  
                     //noe set action for the button 
                 btn2.onclick= e => {
                     console.log(name);
+                    const storageRef=firebase.storage().ref('backMe/'+name)
+                    console.log(storageRef)
+                    let putInTo=storageRef.put(name)
+                     console.log(putInTo)
                     
                 }     
                 
