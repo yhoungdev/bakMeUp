@@ -40,8 +40,10 @@ const Action=()=>{
                     console.log(name);
                     const storageRef=firebase.storage().ref('backMe/'+name)
                     console.log(storageRef)
-                    let putInTo=storageRef.put(name)
-                     console.log(putInTo)
+                    let putInTo=storageRef.put(fileNow)
+                        putInTo.on('state_change', snapshot => {
+                               swal('UPLOAD SUCCESSFULLY','your file has been uploaded succefully ','success')
+                        })
                     
                 }     
                 
